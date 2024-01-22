@@ -34,11 +34,36 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" onclick="login">Sign in</button>
     <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
   </form>
 
-
+  <script>
+    function login() {
+      var email = document.getElementById("inputEmail").value;
+      var password = document.getElementById("inputPassword").value;
+      var data = {
+        "email": email,
+        "password": password
+      };
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+          var response = JSON.parse(this.responseText);
+          if (response.status == "success") {
+            window.location.href = "/home";
+          } else {
+            alert(response.message);
+          }
+        }
+      });
+      xhr.open("POST", "/api/login");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(JSON.stringify(data));
+    }
+  </script>
 </body>
 <grammarly-desktop-integration data-grammarly-shadow-root="true">
   <template shadowrootmode="open">
