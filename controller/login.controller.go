@@ -18,8 +18,10 @@ type LoginRequest struct {
 }
 
 type LoginResponse struct {
-	Token  string    `json:"token"`
-	Expire time.Time `json:"expire"`
+	Status  string    `json:"status"`
+	Message string    `json:"message"`
+	Token   string    `json:"token"`
+	Expire  time.Time `json:"expire"`
 }
 
 type Claims struct {
@@ -72,8 +74,10 @@ func LoginController(w http.ResponseWriter, r *http.Request) {
 	})
 
 	response := LoginResponse{
-		Token:  tokenString,
-		Expire: expirationTime,
+		Status:  "success",
+		Message: "Login success",
+		Token:   tokenString,
+		Expire:  expirationTime,
 	}
 	responseBytes, err := json.Marshal(response)
 	if err != nil {
