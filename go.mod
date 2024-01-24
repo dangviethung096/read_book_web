@@ -2,8 +2,10 @@ module read_book_webs
 
 go 1.21.5
 
+replace github.com/dangviethung096/core => ../core
+
 require (
-	github.com/dangviethung096/core v0.0.3
+	github.com/dangviethung096/core v0.0.0-00010101000000-000000000000
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 )
 

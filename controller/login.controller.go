@@ -12,7 +12,7 @@ var jwtKey = []byte("your_secret_key")
 
 type LoginRequest struct {
 	Username string `json:"username"`
-	Password string `json:"password"`
+	Password string `json:"password" validate:"min=8,max=30"`
 }
 
 type LoginResponse struct {
