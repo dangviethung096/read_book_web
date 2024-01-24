@@ -3,7 +3,7 @@ module read_book_webs
 go 1.21.5
 
 require (
-	github.com/dangviethung096/core v0.0.2
+	github.com/dangviethung096/core v0.0.3
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 )
 

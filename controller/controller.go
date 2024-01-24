@@ -6,6 +6,6 @@ import (
 	"github.com/dangviethung096/core"
 )
 
-func InitController() {
+func Init() {
 	core.RegisterAPI("/api/login", http.MethodPost, LoginController)
 }
