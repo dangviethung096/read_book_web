@@ -1,12 +1,10 @@
 package controller
 
 import (
-	"encoding/json"
-	"fmt"
-	"io"
 	"net/http"
 	"time"
 
+	"github.com/dangviethung096/core"
 	"github.com/dgrijalva/jwt-go"
 )
 
@@ -29,29 +27,8 @@ type Claims struct {
 	jwt.StandardClaims
 }
 
-func LoginController(w http.ResponseWriter, r *http.Request) {
-	// Check validation
-	if r.Method != http.MethodPost {
-		NotFound(w)
-		return
-	}
-
-	bodyBytes, err := io.ReadAll(r.Body)
-	if err != nil {
-		InternalServerError(w)
-		return
-	}
-
-	// get body of request
-	var request LoginRequest
-	err = json.Unmarshal(bodyBytes, &request)
-	if err != nil {
-		BadRequest(w)
-		return
-	}
-
+func LoginController(ctx *core.HttpContext, request LoginRequest) (core.HttpResponse, core.HttpError) {
 	// Check username and password
-
 	expirationTime := time.Now().Add(5 * time.Minute)
 	claims := &Claims{
 		Username: request.Username,
@@ -63,15 +40,8 @@ func LoginController(w http.ResponseWriter, r *http.Request) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	tokenString, err := token.SignedString(jwtKey)
 	if err != nil {
-		InternalServerError(w)
-		return
+		return nil, core.NewHttpError(http.StatusInternalServerError, http.StatusInternalServerError, "Internal server error", nil)
 	}
-
-	http.SetCookie(w, &http.Cookie{
-		Name:    "token",
-		Value:   tokenString,
-		Expires: expirationTime,
-	})
 
 	response := LoginResponse{
 		Status:  "success",
@@ -79,11 +49,8 @@ func LoginController(w http.ResponseWriter, r *http.Request) {
 		Token:   tokenString,
 		Expire:  expirationTime,
 	}
-	responseBytes, err := json.Marshal(response)
-	if err != nil {
-		InternalServerError(w)
-	}
+
 	// Response token
-	w.WriteHeader(http.StatusOK)
-	fmt.Fprint(w, string(responseBytes))
+	return core.NewHttpResponse(http.StatusOK, response), nil
+
 }

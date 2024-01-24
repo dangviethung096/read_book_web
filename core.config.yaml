@@ -1,2 +1,4 @@
-core:
-service:
+debug: true
+server:
+  port: 8080
+  name: read_book_web
