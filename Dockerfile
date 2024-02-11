@@ -1,5 +1,5 @@
 # Start from the latest golang base image
-FROM golang:latest
+FROM golang:1.22.0-alpine3.18
 
 # Add Maintainer Info
 LABEL maintainer="Dang Viet Hung <dangviethung096@gmail.com>"
@@ -7,14 +7,13 @@ LABEL maintainer="Dang Viet Hung <dangviethung096@gmail.com>"
 # Set the Current Working Directory inside the container
 WORKDIR /app
 
-# Copy go mod and sum files
-COPY go.mod go.sum ./
-
 # Download all dependencies. Dependencies will be cached if the go.mod and go.sum files are not changed
-RUN go mod download
 
 # Copy the source from the current directory to the Working Directory inside the container
 COPY . .
+
+# Download all dependencies
+RUN go mod tidy
 
 # Build the Go app
 RUN go build -o main .
