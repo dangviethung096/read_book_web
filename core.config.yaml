@@ -2,8 +2,7 @@ debug: true
 server:
   port: 8080
   name: example
-html:
-  cache: false
+  cache_html: false
 context:
   timeout: 60
 id_generator:
