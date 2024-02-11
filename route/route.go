@@ -7,7 +7,10 @@ func Init() {
 	core.RegisterPage("/", core.Page{
 		PageFiles: []string{"./html/index.html"},
 		Data: HomePageData{
-			Title: "Home",
+			Title:            "Wedding page",
+			Groom:            "Hiệp",
+			Bride:            "Hạnh",
+			FirstInformation: "Chúng tôi sẽ kết hôn vào ngày 14/02/2023",
 		},
 	})
 }

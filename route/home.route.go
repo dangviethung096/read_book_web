@@ -1,5 +1,8 @@
 package route
 
 type HomePageData struct {
-	Title string
+	Title            string
+	Groom            string
+	Bride            string
+	FirstInformation string
 }

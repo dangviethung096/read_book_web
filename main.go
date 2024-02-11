@@ -10,13 +10,12 @@ import (
 func main() {
 	core.Init("core.config.yaml")
 	// Static file
-	core.RegisterFolder("/assets/", "/assets/", "./html/assets")
 	core.RegisterFolder("/css/", "/css/", "./html/css")
+	core.RegisterFolder("/img/", "/img/", "./html/img")
 	core.RegisterFolder("/js/", "/js/", "./html/js")
-	core.RegisterFolder("/dist/", "/dist/", "./html/dist")
+	core.RegisterFolder("/lib/", "/lib/", "./html/lib")
+	core.RegisterFolder("/scss/", "/scss/", "./html/scss")
 	core.RegisterFolder("/fonts/", "/fonts/", "./html/fonts")
-	core.RegisterFolder("/images/", "/images/", "./html/images")
-	core.RegisterFolder("/sass/", "/sass/", "./html/sass")
 	// Controller
 	controller.Init()
 	// Route to page
