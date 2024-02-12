@@ -31,26 +31,27 @@
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="font-secondary text-white mb-n2">Jack <span class="text-primary">&</span> Rose</h1>
+            <h1 class="font-secondary text-white mb-n2">{{.Groom}} <span class="text-primary">&</span> {{.Bride}}</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#story" class="nav-item nav-link">Story</a>
-                <a href="#gallery" class="nav-item nav-link">Gallery</a>
+                <a href="#home" class="nav-item nav-link active">{{.NavHome}}</a>
+                <a href="#about" class="nav-item nav-link">{{.NavAbout}}</a>
+                <a href="#story" class="nav-item nav-link">{{.NavStory}}</a>
+                <a href="#gallery" class="nav-item nav-link">{{.NavGallery}}</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                <h1 class="font-secondary text-white mb-n2">Jack <span class="text-primary">&</span> Rose</h1>
+                <h1 class="font-secondary text-white mb-n2">{{.Groom}} <span class="text-primary">&</span> {{.Bride}}
+                </h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#family" class="nav-item nav-link">Family</a>
-                <a href="#event" class="nav-item nav-link">Event</a>
-                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#family" class="nav-item nav-link">{{.NavFamily}}</a>
+                <a href="#event" class="nav-item nav-link">{{.NavEvent}}</a>
+                <a href="#rsvp" class="nav-item nav-link">{{.NavRSVP}}</a>
+                <a href="#contact" class="nav-item nav-link">{{.NavContact}}</a>
             </div>
         </div>
     </nav>
@@ -61,38 +62,7 @@
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">{{.Groom}} & {{.Bride}}</h1>
-                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0"
-                                    style="letter-spacing: 2px;">{{.FirstInformation}}</h3>
-                            </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
-                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">{{.Groom}} & {{.Bride}}</h1>
-                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0"
-                                    style="letter-spacing: 2px;">{{.FirstInformation}}</h3>
-                            </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                {{template "welcome_image" .WelcomeImage}}
             </div>
             <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
                 <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
