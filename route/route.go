@@ -17,6 +17,7 @@ func Init() {
 				Groom:       "Hiệp",
 				Bride:       "Hạnh",
 				Information: "Chúng tôi sẽ kết hôn vào ngày 14/02/2024",
+				YoutubeLink: "https://www.youtube.com/watch?v=AQqshO7MiMI",
 			},
 			NavHome:    "Home",
 			NavAbout:   "About",

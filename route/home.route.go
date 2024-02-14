@@ -19,4 +19,5 @@ type WelcomeImageData struct {
 	Groom       string
 	Bride       string
 	Information string
+	YoutubeLink string
 }
