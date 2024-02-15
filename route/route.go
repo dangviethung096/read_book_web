@@ -15,6 +15,8 @@ func Init() {
 	var contactTitle = "Contact"
 	var groomTitle = "Chú rể"
 	var brideTitle = "Cô dâu"
+	var storyLineTitle = "Hanh & Hiep's Story"
+	var storyContents = []StoryContent{}
 
 	// Homepage
 	core.RegisterPage("/", core.Page{
@@ -57,8 +59,14 @@ func Init() {
 				BrideTitle: brideTitle,
 				GroomAbout: "",
 				BrideAbout: "",
+				GroomName:  groomName,
+				BrideName:  brideName,
 			},
-			Story:            Story{},
+			Story: Story{
+				StoryTitle:     storyTitle,
+				StoryLineTitle: storyLineTitle,
+				StoryContents:  storyContents,
+			},
 			Gallery:          Gallery{},
 			Event:            Event{},
 			FriendsAndFamily: FriendsAndFamily{},

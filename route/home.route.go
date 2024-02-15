@@ -43,9 +43,20 @@ type About struct {
 	GroomAbout string
 	BrideTitle string
 	BrideAbout string
+	GroomName  string
+	BrideName  string
 }
 
 type Story struct {
+	StoryTitle     string
+	StoryLineTitle string
+	StoryContents  []StoryContent
+}
+
+type StoryContent struct {
+	Title string
+	Date  string
+	Body  string
 }
 
 type Gallery struct {
