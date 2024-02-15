@@ -36,10 +36,13 @@ func Init() {
 				NavRSVP:    "RSVP",
 				NavContact: "Contact",
 			},
-			About:   About{},
-			Story:   Story{},
-			Gallery: Gallery{},
-			Event:   Event{},
+			About:            About{},
+			Story:            Story{},
+			Gallery:          Gallery{},
+			Event:            Event{},
+			FriendsAndFamily: FriendsAndFamily{},
+			RSVP:             RSVP{},
+			Footer:           Footer{},
 		},
 	})
 }
