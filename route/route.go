@@ -17,6 +17,9 @@ func Init() {
 	var brideTitle = "Cô dâu"
 	var storyLineTitle = "Hanh & Hiep's Story"
 	var storyContents = []StoryContent{}
+	var imageLinks = []string{
+		"img/carousel-1.jpg",
+	}
 
 	// Homepage
 	core.RegisterPage("/", core.Page{
@@ -39,6 +42,7 @@ func Init() {
 				BrideName:   brideName,
 				Information: "Chúng tôi sẽ kết hôn",
 				YoutubeLink: "https://www.youtube.com/watch?v=AQqshO7MiMI",
+				ImageLinks:  imageLinks,
 			},
 			NavBar: NavBar{
 				GroomName:  groomName,

@@ -19,6 +19,7 @@ type Carousel struct {
 	BrideName   string
 	Information string
 	YoutubeLink string
+	ImageLinks  []string
 }
 
 type NavBar struct {
