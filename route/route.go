@@ -5,6 +5,17 @@ import "github.com/dangviethung096/core"
 func Init() {
 	var groomName = "Hiệp"
 	var brideName = "Hạnh"
+	var homeTitle = "Home"
+	var aboutTitle = "About"
+	var galleryTitle = "Gallery"
+	var storyTitle = "Story"
+	var familyTitle = "Family"
+	var eventTitle = "Event"
+	var rSVPTitle = "RSVP"
+	var contactTitle = "Contact"
+	var groomTitle = "Chú rể"
+	var brideTitle = "Cô dâu"
+
 	// Homepage
 	core.RegisterPage("/", core.Page{
 		PageFiles: []string{
@@ -30,17 +41,23 @@ func Init() {
 			NavBar: NavBar{
 				GroomName:  groomName,
 				BrideName:  brideName,
-				NavHome:    "Home",
-				NavAbout:   "About",
-				NavGallery: "Gallery",
-				NavStory:   "Story",
-				NavFamily:  "Family",
-				NavEvent:   "Event",
-				NavRSVP:    "RSVP",
-				NavContact: "Contact",
+				NavHome:    homeTitle,
+				NavAbout:   aboutTitle,
+				NavGallery: galleryTitle,
+				NavStory:   storyTitle,
+				NavFamily:  familyTitle,
+				NavEvent:   eventTitle,
+				NavRSVP:    rSVPTitle,
+				NavContact: contactTitle,
 			},
-			VideoModal:       VideoModal{},
-			About:            About{},
+			VideoModal: VideoModal{},
+			About: About{
+				AboutTitle: aboutTitle,
+				GroomTitle: groomTitle,
+				BrideTitle: brideTitle,
+				GroomAbout: "",
+				BrideAbout: "",
+			},
 			Story:            Story{},
 			Gallery:          Gallery{},
 			Event:            Event{},

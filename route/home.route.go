@@ -38,6 +38,11 @@ type VideoModal struct {
 }
 
 type About struct {
+	AboutTitle string
+	GroomTitle string
+	GroomAbout string
+	BrideTitle string
+	BrideAbout string
 }
 
 type Story struct {
