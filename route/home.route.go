@@ -1,23 +1,27 @@
 package route
 
 type HomePageData struct {
-	Title        string
-	Groom        string
-	Bride        string
-	WelcomeImage WelcomeImageData
-	NavHome      string
-	NavAbout     string
-	NavGallery   string
-	NavStory     string
-	NavFamily    string
-	NavEvent     string
-	NavRSVP      string
-	NavContact   string
+	Title    string
+	Carousel Carousel
+	NavBar   NavBar
 }
 
-type WelcomeImageData struct {
-	Groom       string
-	Bride       string
+type Carousel struct {
+	GroomName   string
+	BrideName   string
 	Information string
 	YoutubeLink string
+}
+
+type NavBar struct {
+	GroomName  string
+	BrideName  string
+	NavHome    string
+	NavAbout   string
+	NavGallery string
+	NavStory   string
+	NavFamily  string
+	NavEvent   string
+	NavRSVP    string
+	NavContact string
 }

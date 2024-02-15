@@ -3,30 +3,35 @@ package route
 import "github.com/dangviethung096/core"
 
 func Init() {
+	var groomName = "Hiệp"
+	var brideName = "Hạnh"
 	// Homepage
 	core.RegisterPage("/", core.Page{
 		PageFiles: []string{
 			"./html/index.html",
-			"./html/welcome_image.html",
+			"./html/carousel.html",
+			"./html/nav_bar.html",
 		},
 		Data: HomePageData{
 			Title: "Wedding page",
-			Groom: "Hiệp",
-			Bride: "Hạnh",
-			WelcomeImage: WelcomeImageData{
-				Groom:       "Hiệp",
-				Bride:       "Hạnh",
-				Information: "Chúng tôi sẽ kết hôn vào ngày 14/02/2024",
+			Carousel: Carousel{
+				GroomName:   groomName,
+				BrideName:   brideName,
+				Information: "Chúng tôi sẽ kết hôn",
 				YoutubeLink: "https://www.youtube.com/watch?v=AQqshO7MiMI",
 			},
-			NavHome:    "Home",
-			NavAbout:   "About",
-			NavGallery: "Gallery",
-			NavStory:   "Story",
-			NavFamily:  "Family",
-			NavEvent:   "Event",
-			NavRSVP:    "RSVP",
-			NavContact: "Contact",
+			NavBar: NavBar{
+				GroomName:  groomName,
+				BrideName:  brideName,
+				NavHome:    "Home",
+				NavAbout:   "About",
+				NavGallery: "Gallery",
+				NavStory:   "Story",
+				NavFamily:  "Family",
+				NavEvent:   "Event",
+				NavRSVP:    "RSVP",
+				NavContact: "Contact",
+			},
 		},
 	})
 }
