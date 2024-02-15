@@ -11,6 +11,10 @@ func Init() {
 			"./html/index.html",
 			"./html/carousel.html",
 			"./html/nav_bar.html",
+			"./html/about.html",
+			"./html/story.html",
+			"./html/gallery.html",
+			"./html/event.html",
 		},
 		Data: HomePageData{
 			Title: "Wedding page",
@@ -32,6 +36,10 @@ func Init() {
 				NavRSVP:    "RSVP",
 				NavContact: "Contact",
 			},
+			About:   About{},
+			Story:   Story{},
+			Gallery: Gallery{},
+			Event:   Event{},
 		},
 	})
 }
