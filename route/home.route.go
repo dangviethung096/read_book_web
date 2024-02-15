@@ -3,6 +3,7 @@ package route
 type HomePageData struct {
 	Title            string
 	Carousel         Carousel
+	VideoModal       VideoModal
 	NavBar           NavBar
 	About            About
 	Story            Story
@@ -33,7 +34,7 @@ type NavBar struct {
 	NavContact string
 }
 
-type VideoModel struct {
+type VideoModal struct {
 }
 
 type About struct {

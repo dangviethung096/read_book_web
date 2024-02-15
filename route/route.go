@@ -15,6 +15,9 @@ func Init() {
 			"./html/story.html",
 			"./html/gallery.html",
 			"./html/event.html",
+			"./html/friends_and_family.html",
+			"./html/rsvp.html",
+			"./html/footer.html",
 		},
 		Data: HomePageData{
 			Title: "Wedding page",
@@ -36,6 +39,7 @@ func Init() {
 				NavRSVP:    "RSVP",
 				NavContact: "Contact",
 			},
+			VideoModal:       VideoModal{},
 			About:            About{},
 			Story:            Story{},
 			Gallery:          Gallery{},
