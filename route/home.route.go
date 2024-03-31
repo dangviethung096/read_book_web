@@ -14,12 +14,24 @@ type HomePageData struct {
 	Footer           Footer
 }
 
+/*
+* Update carousel data
+* @param data []ImageCarousel
+* @return void
+ */
+func (h *HomePageData) updateCarouselData(data []ImageCarousel) {
+	for i, carousel := range data {
+		if i == 0 {
+			h.Carousel.ActiveImageCarousel = carousel
+			continue
+		}
+		h.Carousel.ImageCarousel = append(h.Carousel.ImageCarousel, carousel)
+	}
+}
+
 type Carousel struct {
-	GroomName   string
-	BrideName   string
-	Information string
-	YoutubeLink string
-	ImageLinks  []string
+	ActiveImageCarousel ImageCarousel
+	ImageCarousel       []ImageCarousel
 }
 
 type NavBar struct {
@@ -36,6 +48,7 @@ type NavBar struct {
 }
 
 type VideoModal struct {
+	YoutubeLink string
 }
 
 type About struct {
@@ -55,9 +68,10 @@ type Story struct {
 }
 
 type StoryContent struct {
-	Title string
-	Date  string
-	Body  string
+	Title      string
+	Date       string
+	Body       string
+	ImageStory string
 }
 
 type Gallery struct {
@@ -73,4 +87,20 @@ type RSVP struct {
 }
 
 type Footer struct {
+}
+
+type ActiveImageCarousel struct {
+	GroomName   string
+	BrideName   string
+	Information string
+	YoutubeLink string
+	ImageLink   string
+}
+
+type ImageCarousel struct {
+	GroomName   string
+	BrideName   string
+	Information string
+	YoutubeLink string
+	ImageLink   string
 }

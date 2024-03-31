@@ -1,0 +1,16 @@
+{{define "left_story"}}
+
+<div class="row">
+    <div class="col-md-6 text-center text-md-right">
+        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+            <h4 class="mb-2">{{.Title}}</h4>
+            <p class="text-uppercase mb-2">{{.Date}}</p>
+            <p class="m-0">{{.Body}}</p>
+        </div>
+    </div>
+    <div class="col-md-6 text-center text-md-left">
+        <img class="img-fluid ml-md-3" src="{{.ImageStory}}" alt="">
+    </div>
+</div>
+
+{{end}}
