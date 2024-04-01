@@ -5,16 +5,20 @@ import "github.com/dangviethung096/core"
 func Init() {
 	var groomName = "Hiệp"
 	var brideName = "Hạnh"
-	var homeTitle = "Home"
-	var aboutTitle = "About"
-	var galleryTitle = "Gallery"
-	var storyTitle = "Story"
+	var groomFullName = "Nguyễn Thái Hiệp"
+	var brideFullName = "Phạm Thị Hạnh"
+	var homeTitle = "Trang chủ"
+	var aboutTitle = "Về chúng tớ"
+	var galleryTitle = "Ảnh"
+	var storyTitle = "Ký ức"
 	var familyTitle = "Family"
-	var eventTitle = "Event"
+	var eventTitle = "Đám cưới"
 	var rSVPTitle = "RSVP"
-	var contactTitle = "Contact"
+	var contactTitle = "Liên hệ"
 	var groomTitle = "Chú rể"
 	var brideTitle = "Cô dâu"
+	var locationTitle = "Địa điểm"
+	var bankTitle = "Lời nhắn"
 
 	var groomAbout = ""
 	var brideAbout = ""
@@ -30,16 +34,18 @@ func Init() {
 	homePageData := &HomePageData{
 		Title: "Wedding page",
 		NavBar: NavBar{
-			GroomName:  groomName,
-			BrideName:  brideName,
-			NavHome:    homeTitle,
-			NavAbout:   aboutTitle,
-			NavGallery: galleryTitle,
-			NavStory:   storyTitle,
-			NavFamily:  familyTitle,
-			NavEvent:   eventTitle,
-			NavRSVP:    rSVPTitle,
-			NavContact: contactTitle,
+			GroomName:   groomName,
+			BrideName:   brideName,
+			NavHome:     homeTitle,
+			NavAbout:    aboutTitle,
+			NavGallery:  galleryTitle,
+			NavStory:    storyTitle,
+			NavFamily:   familyTitle,
+			NavEvent:    eventTitle,
+			NavRSVP:     rSVPTitle,
+			NavContact:  contactTitle,
+			NavLocation: locationTitle,
+			NavBank:     bankTitle,
 		},
 		VideoModal: VideoModal{
 			YoutubeLink: youtubeLink,
@@ -50,8 +56,8 @@ func Init() {
 			BrideTitle: brideTitle,
 			GroomAbout: groomAbout,
 			BrideAbout: brideAbout,
-			GroomName:  groomName,
-			BrideName:  brideName,
+			GroomName:  groomFullName,
+			BrideName:  brideFullName,
 		},
 		Story: Story{
 			StoryTitle: storyTitle,
@@ -70,7 +76,7 @@ func Init() {
 		carouselData = append(carouselData, ImageCarousel{
 			GroomName:   groomName,
 			BrideName:   brideName,
-			Information: "Chúng tôi sẽ kết hôn",
+			Information: "Chúng mình sẽ kết hôn",
 			YoutubeLink: youtubeLink,
 			ImageLink:   link,
 		})
@@ -95,6 +101,8 @@ func Init() {
 			"./html/friends_and_family.html",
 			"./html/rsvp.html",
 			"./html/footer.html",
+			"./html/maps.html",
+			"./html/bank_accounts.html",
 		},
 		Data: *homePageData,
 	}

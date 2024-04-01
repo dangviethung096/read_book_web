@@ -9,9 +9,11 @@ type HomePageData struct {
 	Story            Story
 	Gallery          Gallery
 	Event            Event
+	Maps             Maps
 	FriendsAndFamily FriendsAndFamily
 	RSVP             RSVP
 	Footer           Footer
+	BankAccounts     BankAccounts
 }
 
 /*
@@ -35,16 +37,18 @@ type Carousel struct {
 }
 
 type NavBar struct {
-	GroomName  string
-	BrideName  string
-	NavHome    string
-	NavAbout   string
-	NavGallery string
-	NavStory   string
-	NavFamily  string
-	NavEvent   string
-	NavRSVP    string
-	NavContact string
+	GroomName   string
+	BrideName   string
+	NavHome     string
+	NavAbout    string
+	NavGallery  string
+	NavStory    string
+	NavFamily   string
+	NavEvent    string
+	NavRSVP     string
+	NavContact  string
+	NavLocation string
+	NavBank     string
 }
 
 type VideoModal struct {
@@ -103,4 +107,10 @@ type ImageCarousel struct {
 	Information string
 	YoutubeLink string
 	ImageLink   string
+}
+
+type Maps struct {
+}
+
+type BankAccounts struct {
 }
