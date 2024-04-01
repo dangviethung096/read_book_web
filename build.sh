@@ -1,1 +1,1 @@
-docker build -t dangviethung096/read-book-webs:0.0.1 .
+go build -o hiep_wedding
