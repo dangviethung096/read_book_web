@@ -1,12 +1,13 @@
 {{define "gallery"}}
-<div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
+<div class="container-fluid bg-gallery" id="gallery"
+    style="padding: 120px 0; margin: 90px 0; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/khanh/gallery/background.jpg), no-repeat center center;">
     <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
-        <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>
-        <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
+        <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">{{.GalleryTitle}}</h6>
+        <h1 class="font-secondary display-4 text-white">{{.GalleryContent}}</h1>
         <i class="far fa-heart text-white"></i>
     </div>
     <div class="owl-carousel gallery-carousel">
-        {{range .Images}}
+        {{range .GalleryImages}}
         {{template "gallery_item" .}}
         {{end}}
     </div>

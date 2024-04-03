@@ -81,7 +81,9 @@ type StoryContent struct {
 }
 
 type Gallery struct {
-	Images []GalleryImage
+	GalleryImages  []GalleryImage
+	GalleryTitle   string
+	GalleryContent string
 }
 
 type GalleryImage struct {
@@ -89,6 +91,16 @@ type GalleryImage struct {
 }
 
 type Event struct {
+	EventTitle   string
+	EventContent string
+	EventArray   []EventArray
+}
+
+type EventArray struct {
+	Title   string
+	Content string
+	Date    string
+	Image   string
 }
 
 type FriendsAndFamily struct {

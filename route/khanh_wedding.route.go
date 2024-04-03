@@ -9,7 +9,7 @@ func khanhWedding() {
 	var brideFullName = "Nguyễn Thị Cúc"
 	var homeTitle = "Trang chủ"
 	var aboutTitle = "Về chúng tớ"
-	var galleryTitle = "Ảnh"
+	var galleryTitle = "Thư viện ảnh"
 	var storyTitle = "Ký ức"
 	var familyTitle = "Family"
 	var eventTitle = "Đám cưới"
@@ -89,6 +89,21 @@ func khanhWedding() {
 	// Update story data
 	updateKhanhStory(homePageData)
 
+	homePageData.Gallery.GalleryTitle = galleryTitle
+	homePageData.Gallery.GalleryContent = "Đây là những khoảnh khắc đẹp nhất của chúng mình"
+
+	// Update image in gallery
+	fileNames := getImageFileNamesInFolder("html/img/khanh/normal")
+	for _, fileName := range fileNames {
+		homePageData.Gallery.GalleryImages = append(homePageData.Gallery.GalleryImages, GalleryImage{
+			ImageLink: "img/khanh/normal/" + fileName,
+		})
+	}
+
+	// Update event data
+	homePageData.Event.EventTitle = eventTitle
+	homePageData.Event.EventContent = "Trân trọng kính mời bạn và người thương tới dự buổi tiệc chung vui cùng chúng mình"
+
 	pageData := core.Page{
 		PageFiles: []string{
 			"./html/index.html",
@@ -109,14 +124,6 @@ func khanhWedding() {
 			"./html/gallery_item.html",
 		},
 		Data: *homePageData,
-	}
-
-	// Update image in gallery
-	fileNames := getImageFileNamesInFolder("html/img/khanh/normal")
-	for _, fileName := range fileNames {
-		homePageData.Gallery.Images = append(homePageData.Gallery.Images, GalleryImage{
-			ImageLink: "img/khanh/normal/" + fileName,
-		})
 	}
 	// Homepage
 	core.RegisterPage("/khanh", pageData)

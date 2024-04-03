@@ -9,7 +9,6 @@ import (
 func Init() {
 	hiepWedding()
 	khanhWedding()
-
 }
 
 func getImageFileNamesInFolder(folderPath string) []string {
