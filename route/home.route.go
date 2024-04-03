@@ -63,6 +63,8 @@ type About struct {
 	BrideAbout string
 	GroomName  string
 	BrideName  string
+	GroomImage string
+	BrideImage string
 }
 
 type Story struct {
@@ -79,6 +81,11 @@ type StoryContent struct {
 }
 
 type Gallery struct {
+	Images []GalleryImage
+}
+
+type GalleryImage struct {
+	ImageLink string
 }
 
 type Event struct {
