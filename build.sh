@@ -1,1 +1,1 @@
-go build -o hiep_wedding
+go build -o wedding
