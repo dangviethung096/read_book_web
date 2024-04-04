@@ -1,1 +1,1 @@
-sudo ./hiep_wedding > log.txt 2>&1 &
+sudo ./wedding > log.txt 2>&1 &
