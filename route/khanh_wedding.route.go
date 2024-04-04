@@ -135,7 +135,7 @@ func khanhWedding() {
 		Data: *homePageData,
 	}
 	// Homepage
-	core.RegisterPage("/khanh", pageData)
+	core.RegisterPage("/khanh-cuc", pageData)
 }
 
 func updateKhanhStory(homePageData *HomePageData) {

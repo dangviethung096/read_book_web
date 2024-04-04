@@ -568,6 +568,9 @@ mark,
   height: auto;
 }
 
+#event .img-fluid {
+  height: 500px;
+}
 
 .img-thumbnail {
   padding: 0.25rem;
