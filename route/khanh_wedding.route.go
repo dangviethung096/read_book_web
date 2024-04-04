@@ -136,25 +136,25 @@ func updateKhanhStory(homePageData *HomePageData) {
 			Title:      "First Meet",
 			Date:       "2015-01-01",
 			Body:       "We met at a friend's party. We were both shy and didn't talk much. But we both felt something special. We started to talk more and more and we fell in love.",
-			ImageStory: "img/khanh/story_1.jpg",
+			ImageStory: "img/khanh/story/story_1.jpg",
 		},
 		{
 			Title:      "First Date",
 			Date:       "2015-02-01",
 			Body:       "We went to a coffee shop. We talked for hours. We found out that we have a lot in common. We both love to travel and we both love to eat.",
-			ImageStory: "img/khanh/story_2.jpg",
+			ImageStory: "img/khanh/story/story_2.jpg",
 		},
 		{
 			Title:      "Proposal",
 			Date:       "2016-01-01",
 			Body:       "I proposed to her on a beach. It was a beautiful sunset. She said yes. We were both very happy.",
-			ImageStory: "img/khanh/story_3.jpg",
+			ImageStory: "img/khanh/story/story_3.jpg",
 		},
 		{
 			Title:      "Enagagement",
 			Date:       "2016-02-01",
 			Body:       "We had a small party with our friends and family. We were both very happy.",
-			ImageStory: "img/khanh/story_4.jpg",
+			ImageStory: "img/khanh/story/story_4.jpg",
 		},
 	}
 	homePageData.Story.StoryLineTitle = storyLineTitle
