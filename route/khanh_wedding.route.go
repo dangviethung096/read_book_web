@@ -59,8 +59,8 @@ func khanhWedding() {
 			BrideAbout: brideAbout,
 			GroomName:  groomFullName,
 			BrideName:  brideFullName,
-			GroomImage: "img/khanh/chu_re.jpg",
-			BrideImage: "img/khanh/co_dau.jpg",
+			GroomImage: "img/khanh/about/chu_re.jpg",
+			BrideImage: "img/khanh/about/co_dau.jpg",
 		},
 		Story: Story{
 			StoryTitle: storyTitle,
