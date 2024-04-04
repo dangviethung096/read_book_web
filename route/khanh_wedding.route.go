@@ -6,7 +6,7 @@ func khanhWedding() {
 	var groomName = "Khánh"
 	var brideName = "Cúc"
 	var groomFullName = "Phạm Duy Khánh"
-	var brideFullName = "Nguyễn Thị Cúc"
+	var brideFullName = "Nguyễn Thu Cúc"
 	var homeTitle = "Trang chủ"
 	var aboutTitle = "Về chúng tớ"
 	var galleryTitle = "Thư viện ảnh"
@@ -65,8 +65,17 @@ func khanhWedding() {
 		Story: Story{
 			StoryTitle: storyTitle,
 		},
-		Gallery:          Gallery{},
-		Event:            Event{},
+		Gallery: Gallery{},
+		Event: Event{
+			EventTitle:        eventTitle,
+			EventContent:      "Trân trọng kính mời bạn và người thương tới dự buổi tiệc chung vui cùng chúng mình",
+			BrideEventTitle:   "Lễ vu quy",
+			BrideEventContent: "Tại nhà gái - Nhà văn hoá thôn Quảng Minh, xã Mỹ Hưng, huyện Thanh Oai, Hà Nội",
+			BrideEventDate:    "10:00 AM 13/04/2024",
+			GroomEventTitle:   "Lễ thành hôn",
+			GroomEventContent: "Tại nhà trai - 155 Phố Lưu Trọng Lư, Phúc Lộc, Hưng Đạo, Dương Kinh, Hải Phòng",
+			GroomEventDate:    "10:00 AM 14/04/2024",
+		},
 		FriendsAndFamily: FriendsAndFamily{},
 		RSVP:             RSVP{},
 		Footer:           Footer{},

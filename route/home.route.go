@@ -91,9 +91,14 @@ type GalleryImage struct {
 }
 
 type Event struct {
-	EventTitle   string
-	EventContent string
-	EventArray   []EventArray
+	EventTitle        string
+	EventContent      string
+	BrideEventTitle   string
+	BrideEventContent string
+	BrideEventDate    string
+	GroomEventTitle   string
+	GroomEventContent string
+	GroomEventDate    string
 }
 
 type EventArray struct {
