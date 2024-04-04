@@ -23,11 +23,11 @@ func khanhWedding() {
 	var groomAbout = ""
 	var brideAbout = ""
 	var imageLinks = []string{
-		"img/khanh/home_01.jpg",
-		"img/khanh/home_02.jpg",
-		"img/khanh/home_03.jpg",
-		"img/khanh/home_04.jpg",
-		"img/khanh/home_05.jpg",
+		"img/khanh/home/home_01.jpg",
+		"img/khanh/home/home_02.jpg",
+		"img/khanh/home/home_03.jpg",
+		"img/khanh/home/home_04.jpg",
+		"img/khanh/home/home_05.jpg",
 	}
 
 	var youtubeLink = "https://www.youtube.com/embed/w_17Bz-ngVM?si=vJenP1mx8mXrL5QF"
@@ -93,10 +93,10 @@ func khanhWedding() {
 	homePageData.Gallery.GalleryContent = "Đây là những khoảnh khắc đẹp nhất của chúng mình"
 
 	// Update image in gallery
-	fileNames := getImageFileNamesInFolder("html/img/khanh/normal")
+	fileNames := getImageFileNamesInFolder("html/img/khanh/gallery")
 	for _, fileName := range fileNames {
 		homePageData.Gallery.GalleryImages = append(homePageData.Gallery.GalleryImages, GalleryImage{
-			ImageLink: "img/khanh/normal/" + fileName,
+			ImageLink: "img/khanh/gallery/" + fileName,
 		})
 	}
 
