@@ -99,6 +99,8 @@ type Event struct {
 	GroomEventTitle   string
 	GroomEventContent string
 	GroomEventDate    string
+	EventImage1       string
+	EventImage2       string
 }
 
 type EventArray struct {
@@ -134,7 +136,19 @@ type ImageCarousel struct {
 }
 
 type Maps struct {
+	MapsTitle         string
+	MapsTitleMessage  string
+	GroomAddressTitle string
+	BrideAddressTitle string
+	GroomAddress      string
+	BrideAddress      string
 }
 
 type BankAccounts struct {
+	GroomName        string
+	GroomBankAccount string
+	GroomBankQR      string
+	BrideName        string
+	BrideBankAccount string
+	BrideBankQR      string
 }

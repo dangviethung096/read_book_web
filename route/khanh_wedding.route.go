@@ -75,10 +75,20 @@ func khanhWedding() {
 			GroomEventTitle:   "Lễ thành hôn",
 			GroomEventContent: "Tại nhà trai - 155 Phố Lưu Trọng Lư, Phúc Lộc, Hưng Đạo, Dương Kinh, Hải Phòng",
 			GroomEventDate:    "10:00 AM 14/04/2024",
+			EventImage1:       "img/khanh/event/1.jpg",
+			EventImage2:       "img/khanh/event/2.jpg",
 		},
 		FriendsAndFamily: FriendsAndFamily{},
 		RSVP:             RSVP{},
 		Footer:           Footer{},
+		Maps: Maps{
+			MapsTitle:         "Địa chỉ",
+			MapsTitleMessage:  "Địa chỉ nhà chúng mình",
+			GroomAddressTitle: "Nhà trai",
+			BrideAddressTitle: "Nhà gái",
+			GroomAddress:      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.7016885128496!2d106.67318267574507!3d20.803353080790245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a70f62e95b357%3A0xbc7494c4d829e822!2zMTU1IFBo4buRIEzGsHUgVHLhu41uZyBMxrAsIEjGsG5nIMSQ4bqhbywgRMawxqFuZyBLaW5oLCBI4bqjaSBQaMOybmcsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1712238300217!5m2!1sen!2s",
+			BrideAddress:      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.0102549693706!2d105.78920497574764!3d20.91190708070844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135b357485e67db%3A0x7c0adc6e0ce91843!2zTmjDoCB2xINuIGjDs2E!5e0!3m2!1sen!2s!4v1712238371353!5m2!1sen!2s",
+		},
 	}
 
 	// Update carousel data
