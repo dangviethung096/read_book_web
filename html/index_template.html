@@ -37,13 +37,11 @@
     {{template "carousel" .Carousel}}
     <!-- Carousel End -->
 
+
     <!-- Video Modal Start: definition at carousel.html -->
     {{template "video_modal" .VideoModal}}
     <!-- Video Modal End -->
 
-    <!-- Event Start -->
-    {{template "event" .Event}}
-    <!-- Event End -->
 
     <!-- About Start -->
     {{template "about" .About}}
@@ -51,7 +49,7 @@
 
 
     <!-- Story Start -->
-    <!-- {{template "story" .Story}} -->
+    {{template "story" .Story}}
     <!-- Story End -->
 
 
@@ -60,13 +58,18 @@
     <!-- Gallery End -->
 
 
+    <!-- Event Start -->
+    {{template "event" .Event}}
+    <!-- Event End -->
+
+
     <!-- Maps Start -->
     {{template "maps" .Maps}}
     <!-- Maps End -->
 
-    <!-- Bank Accounts Start -->
-    <!-- {{template "bank_accounts" .BankAccounts}} -->
-    <!-- Bank Accounts End -->
+    <!-- Maps Start -->
+    {{template "bank_accounts" .BankAccounts}}
+    <!-- Maps End -->
 
     <!-- Footer Start -->
     {{template "footer" .Footer}}

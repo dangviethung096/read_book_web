@@ -30,7 +30,7 @@ func khanhWedding() {
 		"img/khanh/home/home_05.jpg",
 	}
 
-	var youtubeLink = "https://www.youtube.com/embed/w_17Bz-ngVM?si=vJenP1mx8mXrL5QF"
+	var youtubeLink = "https://www.youtube.com/embed/9-RPip_yQtQ?si=OWUtb2uEGFbq2EOZ"
 
 	homePageData := &HomePageData{
 		Title: "Đám cưới chúng mình",
@@ -126,8 +126,8 @@ func khanhWedding() {
 	pageData := core.Page{
 		PageFiles: []string{
 			"./html/index.html",
-			"./html/carousel.html",
-			"./html/carousel_item.html",
+			"./html/carousel_khanh.html",
+			"./html/carousel_item_khanh.html",
 			"./html/nav_bar.html",
 			"./html/about.html",
 			"./html/story.html",
